@@ -67,11 +67,13 @@ $default-float: left;
 
 // Colors
 
-$primary-color: rgb(36, 36, 35);
-$secondary-color: rgb(191,177,145);
+$primary-color: #504248;
+$secondary-color: #f2eeeb;
+$tertiary-color: #657d8b;
+$highlight-color: #f47b20;
 $alert-color: rgb(252,177,0);
 $success-color: rgb(180, 184, 152);
-$gray-color: rgb(176, 176, 176);
+$gray-color: #32282d;
 
 // Make sure border radius matches unless we want it different.
 

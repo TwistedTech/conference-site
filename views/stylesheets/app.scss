@@ -7,5 +7,143 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
+@mixin super-button {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  display: block;
+  width: 120px;
+  padding: 2px;
+  border: 1px solid $secondary-color;
+}
 
-body { background-color: $secondary-color; }
+body {
+  background-color: $gray-color;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Puritan', sans-serif; }
+
+.intro {
+  background-color: $secondary-color;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+
+  > div {
+    height: 355px;
+  }
+}
+
+.body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 90px 30px 30px;
+
+  h2 {
+    color: $secondary-color;
+
+    span:first-child {
+      display: block;
+      font-size: 1em;
+    }
+    span:last-child {
+      display: block;
+      font-size: 1.8em;
+      color: $highlight-color;
+      margin-top: -20px;
+    }
+  }
+}
+
+.form {
+  background-color: $tertiary-color;
+
+  label {
+    text-align: right;
+    font-size: 1.3em;
+    color: $secondary-color;
+    font-family: 'Puritan', sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    color: $secondary-color;  
+  }
+
+  [class*="column"]:last-child {
+    float: left;
+  }
+}
+
+.body-copy {
+  -moz-column-count: 2;
+  -moz-column-gap: 40px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 40px;
+  text-align: justify;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  width: 442px;
+  height: 392px;
+  margin-left: -221px;
+}
+
+.event-date-location {
+  background-image: url(/images/large-gear.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 355px;
+  height: 165px;
+  font-size: 2em;
+
+  div {
+    position: relative;
+    top: 85px;
+    left: -30px;
+  }
+
+  .date, .location {
+    display: block;
+  }
+}
+
+.sign-up-cta {
+  background-image: url(/images/large-gear.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 220px;
+  padding: 10px 0;
+  text-align: justify;
+
+  div {
+    padding: 0 15px 0 60px;
+    font-size: 0.8em;
+  }
+
+  h5, p {
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+a.button, button.button {
+  @include super-button;
+
+  span {
+    border: 1px solid $secondary-color;
+    display: block;
+    padding: 4px 0;
+  }
+}
