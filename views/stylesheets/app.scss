@@ -8,29 +8,31 @@
 @import "foundation";
 
 @mixin super-button {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'ff-tisa-web-pro', sans-serif;
   font-size: 1.3em;
-  font-weight: 700;
+  font-weight: 100;
   display: block;
   width: 120px;
   padding: 2px;
   border: 1px solid $secondary-color;
+  text-transform: uppercase;
 }
 
 body {
   background-color: $gray-color;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'ff-tisa-web-pro', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'Puritan', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'museo', sans-serif; font-weight: 700; }
 
 .intro {
   background-color: $secondary-color;
   text-align: center;
   position: relative;
   overflow: visible;
+  height: 355px;
 
-  > div {
+  .row, .columns {
     height: 355px;
   }
 }
@@ -40,17 +42,21 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Puritan', sans-serif; }
   color: $secondary-color;
   text-align: center;
   padding: 90px 30px 30px;
+  font-size: 1.2em;
 
   h2 {
     color: $secondary-color;
+    font-family: 'museo', sans-serif;
 
     span:first-child {
       display: block;
-      font-size: 1em;
+      font-size: 0.8em;
+      font-family: 'ff-tisa-web-pro', sans-serif;
+      font-weight: normal;
     }
     span:last-child {
       display: block;
-      font-size: 1.8em;
+      font-size: 1.5em;
       color: $highlight-color;
       margin-top: -20px;
     }
@@ -59,29 +65,45 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Puritan', sans-serif; }
 
 .form {
   background-color: $tertiary-color;
+  padding: 30px 0 60px;
 
   label {
     text-align: right;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: $secondary-color;
-    font-family: 'Puritan', sans-serif;
+    font-family: 'ff-tisa-web-pro', sans-serif;
+    margin-top: 6px;
+  }
+
+  textarea {
+    height: 250px;
   }
 
   h2 {
     text-align: center;
-    color: $secondary-color;  
+    color: $secondary-color;
+    font-size: 3em;
+    font-weight: normal;
+    font-family: 'ff-tisa-web-pro', sans-serif;
   }
 
   [class*="column"]:last-child {
     float: left;
   }
+
+  .row .center .button {
+    margin: 0 auto;
+    font-size: 1.8em;
+    width: 300px;
+    background-color: $highlight-color;
+  }
 }
 
 .body-copy {
-  -moz-column-count: 2;
-  -moz-column-gap: 40px;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 40px;
+  // -moz-column-count: 2;
+  // -moz-column-gap: 40px;
+  // -webkit-column-count: 2;
+  // -webkit-column-gap: 40px;
   text-align: justify;
 }
 
@@ -104,6 +126,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Puritan', sans-serif; }
   width: 355px;
   height: 165px;
   font-size: 2em;
+  font-family: 'museo', sans-serif;
+  font-weight: 700;
 
   div {
     position: relative;
@@ -114,6 +138,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Puritan', sans-serif; }
   .date, .location {
     display: block;
   }
+
+  .location {
+    font-weight: 300;
+  }
 }
 
 .sign-up-cta {
@@ -121,20 +149,24 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Puritan', sans-serif; }
   background-repeat: no-repeat;
   background-position: left bottom;
   position: absolute;
-  right: 0;
+  right: -20px;
   top: 0;
-  width: 250px;
+  width: 300px;
   height: 220px;
   padding: 10px 0;
   text-align: justify;
 
   div {
-    padding: 0 15px 0 60px;
+    padding: 0 60px;
     font-size: 0.8em;
   }
 
   h5, p {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'museo', sans-serif;
+  }
+
+  a.button {
+    margin: 0 auto;
   }
 }
 

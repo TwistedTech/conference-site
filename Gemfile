@@ -1,5 +1,5 @@
 # A sample Gemfile
-source "https://rubygems.org"
+source "http://rubygems.org"
 ruby "2.0.0"
 gem 'sinatra'
 gem 'rack'
